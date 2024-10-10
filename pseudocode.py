@@ -82,3 +82,9 @@ print(document_structure)
 def cnn_backbone(page):
     model = load_resnet50()  
     return model.extract_features(page)
+
+##ResNet-50 CNN backbone is used to extract multi-scale visual features from each document page.
+##DINO-based object detector is used for graphical object detection, such as tables and images.
+##LayoutLMv3 is used to classify text lines into paragraphs, headings, lists, etc.
+##transformer-based model for reading order prediction (intra-region and inter-region).
+##relation prediction head is used to model relationships between text and graphical objects, rather than simple coordinate-based sorting.
